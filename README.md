@@ -20,4 +20,4 @@ bun dev
 ![Назва](public/sidebarmenu.png)
 
 # Toasts and Input
-![Назва](public/sidebarmenu.png)
+![Назва](public/toast.png)
