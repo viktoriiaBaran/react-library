@@ -1,0 +1,220 @@
+.input-container {
+  width: 100%;
+  position: relative;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  width: 100%;
+  border: 2px solid;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: white;
+  padding-left: 16px;
+}
+
+/* Sizes */
+.input-with-label {
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+/* Variants */
+.input-default {
+  border-color: #d1d5db;
+  background: white;
+  color: #1f2937;
+}
+
+.input-default:hover {
+  border-color: #9ca3af;
+}
+
+.input-default:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.input-default.error {
+  border-color: #ef4444;
+}
+
+.input-default.error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.input-default.success {
+  border-color: #10b981;
+}
+
+.input-default.success:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+/* Disabled */
+.input-field:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Label */
+.floating-label {
+  position: absolute;
+  left: 16px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+  background: white;
+  padding: 0 8px;
+  color: #6b7280;
+}
+
+.floating-label.up {
+  font-size: 12px;
+  top: -8px;
+  left: 12px;
+}
+
+.floating-label.down {
+  font-size: 16px;
+  top: 12px;
+}
+
+.floating-label.focused {
+  color: #3b82f6;
+}
+
+.floating-label.error {
+  color: #ef4444;
+}
+
+.floating-label.success {
+  color: #10b981;
+}
+
+/* Icons container */
+.icons-container {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Password strength */
+.password-strength {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+}
+
+.strength-bar {
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.strength-weak {
+  width: 25%;
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.strength-medium {
+  width: 50%;
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.strength-strong {
+  width: 100%;
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+/* Messages */
+.message {
+  margin-top: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  animation: slideDown 0.3s ease-out;
+}
+
+.message.error {
+  color: #dc2626;
+}
+
+.message.success {
+  color: #059669;
+}
+
+/* Animations */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.3s ease-out;
+}
