@@ -15,6 +15,7 @@ const meta: Meta<typeof Toast> = {
       },
     },
   },
+  tags: ["autodocs"],
   argTypes: {
     type: {
       control: { type: "select" },
